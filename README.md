@@ -1,0 +1,2 @@
+A client-server application based on the TCP/IP protocol. 
+It was created in the Clion development environment using the Qt Framework, programmed in C++. The application performs calculations of the physical-mechanical properties of soil.
