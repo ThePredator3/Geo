@@ -49,18 +49,20 @@ void MainWindow::slotReadyRead()
         return;
     }
 
-    QString soilName{};
-    float soilResistivity{ 0 };
-    float porosityCoefficient{ 0 };
-    float specificAdhesion{ 0 };
-    float firstSpecificAdhesion{ 0 };
-    float secondSpecificAdhesion{ 0 };
-    float angleInternalFriction{ 0 };
-    float firstAngleInternalFriction{ 0 };
-    float secondAngleInternalFriction{ 0 };
+    QString serverData{};
+    in >> serverData;
 
-    in >> soilName >> soilResistivity >> porosityCoefficient >> specificAdhesion >> firstSpecificAdhesion >>
-        secondSpecificAdhesion >> angleInternalFriction >> firstAngleInternalFriction >> secondAngleInternalFriction;
+    QStringList values = serverData.split(";");
+
+    QString soilName = values.value(0);
+    float soilResistivity = values.value(1).toFloat();
+    float porosityCoefficient = values.value(2).toFloat();
+    float specificAdhesion = values.value(3).toFloat();
+    float firstSpecificAdhesion = values.value(4).toFloat();
+    float secondSpecificAdhesion = values.value(5).toFloat();
+    float angleInternalFriction = values.value(6).toFloat();
+    float firstAngleInternalFriction = values.value(7).toFloat();
+    float secondAngleInternalFriction = values.value(8).toFloat();
 
     if(in.status() == QDataStream::Ok)
     {

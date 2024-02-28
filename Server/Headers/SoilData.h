@@ -29,15 +29,15 @@ struct SoilData
 
     std::string Dump() const
     {
-        std::string result = soilName;
-        result += std::to_string(resistivity);
-        result += std::to_string(porosityCoefficient);
-        result += std::to_string(specificAdhesion);
-        result += std::to_string(firstSpecificAdhesion);
-        result += std::to_string(secondSpecificAdhesion);
-        result += std::to_string(angleInternalFriction);
-        result += std::to_string(firstAngleInternalFriction);
-        result += std::to_string(secondAngleInternalFriction);
+        std::string result = soilName + ";";
+        result += std::to_string(resistivity) + ";";
+        result += std::to_string(porosityCoefficient) + ";";
+        result += std::to_string(specificAdhesion) + ";";
+        result += std::to_string(firstSpecificAdhesion) + ";";
+        result += std::to_string(secondSpecificAdhesion) + ";";
+        result += std::to_string(angleInternalFriction) + ";";
+        result += std::to_string(firstAngleInternalFriction) + ";";
+        result += std::to_string(secondAngleInternalFriction) + ";";
 
         return result;
     }
